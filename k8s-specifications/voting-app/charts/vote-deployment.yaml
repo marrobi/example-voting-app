@@ -1,15 +1,15 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: worker
+  name: vote
   namespace: vote
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: worker
+        app: vote
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_worker
-        name: worker
+      - image: "{{ .Values.registry }}/vote:{{ .Values.votetag }}"
+        name: vote

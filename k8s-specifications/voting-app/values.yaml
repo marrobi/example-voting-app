@@ -1,0 +1,9 @@
+# Default values for voting-app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+registry: marcusreg.azurecr.io
+  
+votetag: latest
+resulttag: latest
+workertag: latest
